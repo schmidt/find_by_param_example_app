@@ -1,0 +1,13 @@
+<% if @users.present? %>
+  <h1>Users listing</h1>
+
+  <ol>
+    <% for user in @users %>
+      <li>
+        <%= link_to user.name, user_path(user) %>
+      </li>
+    <% end %>
+  </ol>
+<% end %>
+
+<p><%= link_to "Create new user", new_user_path %></p>

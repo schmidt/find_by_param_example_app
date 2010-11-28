@@ -1,0 +1,11 @@
+<h1>Showing single user</h1>
+
+<p><strong>Name:</strong> <%=h @user.name %></p>
+
+<p><strong>Description:</strong></p>
+<%= simple_format @user.description %>
+
+<p>
+  <%= link_to "Back to list", users_path %>
+  <%= link_to "Edit user", edit_user_path(@user) %>
+</p>
